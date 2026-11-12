@@ -1,0 +1,215 @@
+/* public/style.css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f4f6f8;
+  color: #333;
+}
+
+.centered {
+  max-width: 420px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.centered h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.auth-form h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #34495e;
+}
+
+.auth-form input,
+.add-note input,
+.add-note textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #dcdfe6;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.auth-form input:focus,
+.add-note input:focus,
+.add-note textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.auth-form button,
+.add-note button,
+#logout-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.auth-form button:hover,
+.add-note button:hover {
+  background: #43a047;
+}
+
+#logout-btn {
+  width: auto;
+  padding: 0.5rem 1rem;
+  background: #e74c3c;
+  font-size: 0.9rem;
+}
+
+#logout-btn:hover {
+  background: #c0392b;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.message {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.message:not(:empty) {
+  display: block;
+  background-color: #fde8e8;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+
+.message.success {
+  background-color: #def7ec;
+  color: #03543f;
+  border: 1px solid #84e1bc;
+}
+
+.toggle {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.toggle a {
+  cursor: pointer;
+  color: #3182ce;
+  text-decoration: underline;
+}
+
+#dashboard-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #2d3748;
+}
+
+.add-note {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.add-note h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.note-card {
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid #4CAF50;
+}
+
+.note-card h4 {
+  margin: 0 1.5rem 0.5rem 0;
+  font-size: 1.1rem;
+  color: #1a202c;
+  word-break: break-word;
+}
+
+.note-card p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+  white-space: pre-wrap;
+  word-break: break-word;
+  flex-grow: 1;
+}
+
+.note-card .date {
+  font-size: 0.8rem;
+  color: #a0aec0;
+}
+
+.note-card .del-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: transparent;
+  border: none;
+  color: #e53e3e;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.note-card .del-btn:hover {
+  background: #fed7d7;
+}
+

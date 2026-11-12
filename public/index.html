@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Notes Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ==== Auth Section ==== -->
+  <section id="auth-section" class="centered">
+    <h1>Private Notes Manager</h1>
+
+    <div id="login-form" class="auth-form">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Email" required autocomplete="email">
+      <input type="password" id="login-password" placeholder="Password" required autocomplete="current-password">
+      <button id="login-btn">Login</button>
+      <p class="toggle">Don't have an account? <a href="#" id="show-register">Register</a></p>
+    </div>
+
+    <div id="register-form" class="auth-form hidden">
+      <h2>Register</h2>
+      <input type="text" id="reg-name" placeholder="Full Name" required autocomplete="name">
+      <input type="email" id="reg-email" placeholder="Email" required autocomplete="email">
+      <input type="password" id="reg-password" placeholder="Password (min 6 chars, 1 number)" required autocomplete="new-password">
+      <button id="register-btn">Register</button>
+      <p class="toggle">Already have an account? <a href="#" id="show-login">Login</a></p>
+    </div>
+
+    <div id="auth-message" class="message"></div>
+  </section>
+
+  <!-- ==== Dashboard Section ==== -->
+  <section id="dashboard-section" class="hidden">
+    <header>
+      <h2 id="welcome-msg"></h2>
+      <button id="logout-btn">Logout</button>
+    </header>
+
+    <div class="add-note">
+      <h3>New Note</h3>
+      <input type="text" id="note-title" placeholder="Title" required>
+      <textarea id="note-content" rows="4" placeholder="Your note..." required></textarea>
+      <button id="save-note-btn">Save Note</button>
+      <div id="note-message" class="message"></div>
+    </div>
+
+    <h3>Your Notes</h3>
+    <div id="notes-list" class="notes-grid"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
