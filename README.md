@@ -95,3 +95,4 @@ private-notes-manager/
 
 ## 📄 License
 MIT
+
